@@ -53,4 +53,8 @@ export default class DashboardPage extends BasePage {
        return $ (".react-grid-Canvas .react-grid-Row");
     }
 
+    get filterClearBtn() {
+        return $('div=Clear');
+    }
+
 }

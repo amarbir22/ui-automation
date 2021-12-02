@@ -53,10 +53,10 @@ export default class BasePage {
         browser.execute('arguments[0].value=\'\'',elm);
     }
 
-    getInputValues (elms) {
+    async getInputValues (elms) {
         const values = [];
-        elms[0].waitForExist();
-        this.waitForAnimation();
+        await elms[0].waitForExist();
+        await this.waitForAnimation();
 
         elms.map((elm) => {
             if (elm.isDisplayed()) {
